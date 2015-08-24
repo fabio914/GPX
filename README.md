@@ -18,7 +18,7 @@ This app is also a simple example of an iOS location-based application, and it c
 * iOS 8+
 
 ### Uses
-* Nick Lockwood's XMLDictionary
+* [Nick Lockwood's XMLDictionary](https://github.com/nicklockwood/XMLDictionary)
 
 ### Useful links
 [Using Xcode to Test Location Services by Nick Arnott](https://possiblemobile.com/2013/04/using-xcode-to-test-location-services/)
