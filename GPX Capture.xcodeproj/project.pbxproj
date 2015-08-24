@@ -19,6 +19,8 @@
 		E5C183301B8B8AAC0022A1F5 /* BNLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C1832F1B8B8AAC0022A1F5 /* BNLocation.m */; };
 		E5C183351B8B926B0022A1F5 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */; };
 		E5C183381B8B97260022A1F5 /* BNLocationDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C183371B8B97260022A1F5 /* BNLocationDateFormatter.m */; };
+		E5C1833E1B8BC3770022A1F5 /* BNTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C1833D1B8BC3770022A1F5 /* BNTableView.m */; };
+		E5C183411B8BC39E0022A1F5 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C183401B8BC39E0022A1F5 /* NSArray+Safe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		E5C183361B8B97260022A1F5 /* BNLocationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLocationDateFormatter.h; sourceTree = "<group>"; };
 		E5C183371B8B97260022A1F5 /* BNLocationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNLocationDateFormatter.m; sourceTree = "<group>"; };
+		E5C1833C1B8BC3770022A1F5 /* BNTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTableView.h; sourceTree = "<group>"; };
+		E5C1833D1B8BC3770022A1F5 /* BNTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTableView.m; sourceTree = "<group>"; };
+		E5C1833F1B8BC39E0022A1F5 /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		E5C183401B8BC39E0022A1F5 /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		E5C183011B8B891B0022A1F5 /* GPX Capture */ = {
 			isa = PBXGroup;
 			children = (
+				E5C1833B1B8BC3480022A1F5 /* BNTableView */,
 				E5C183321B8B92510022A1F5 /* Categories */,
 				E5C1832A1B8B8A730022A1F5 /* Model */,
 				E5C183061B8B891B0022A1F5 /* AppDelegate.h */,
@@ -157,8 +164,19 @@
 			children = (
 				E5C183331B8B926B0022A1F5 /* MKMapView+ZoomLevel.h */,
 				E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */,
+				E5C1833F1B8BC39E0022A1F5 /* NSArray+Safe.h */,
+				E5C183401B8BC39E0022A1F5 /* NSArray+Safe.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		E5C1833B1B8BC3480022A1F5 /* BNTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E5C1833C1B8BC3770022A1F5 /* BNTableView.h */,
+				E5C1833D1B8BC3770022A1F5 /* BNTableView.m */,
+			);
+			path = BNTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +286,9 @@
 			files = (
 				E5C1830B1B8B891B0022A1F5 /* ViewController.m in Sources */,
 				E5C183351B8B926B0022A1F5 /* MKMapView+ZoomLevel.m in Sources */,
+				E5C183411B8BC39E0022A1F5 /* NSArray+Safe.m in Sources */,
 				E5C183081B8B891B0022A1F5 /* AppDelegate.m in Sources */,
+				E5C1833E1B8BC3770022A1F5 /* BNTableView.m in Sources */,
 				E5C183301B8B8AAC0022A1F5 /* BNLocation.m in Sources */,
 				E5C1832D1B8B8A9B0022A1F5 /* BNCapture.m in Sources */,
 				E5C183051B8B891B0022A1F5 /* main.m in Sources */,
@@ -471,6 +491,7 @@
 				E5C183241B8B891B0022A1F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C183251B8B891B0022A1F5 /* Build configuration list for PBXNativeTarget "GPX CaptureTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +500,7 @@
 				E5C183271B8B891B0022A1F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
