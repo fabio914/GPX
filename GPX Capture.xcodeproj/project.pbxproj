@@ -14,6 +14,11 @@
 		E5C183101B8B891B0022A1F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C1830F1B8B891B0022A1F5 /* Images.xcassets */; };
 		E5C183131B8B891B0022A1F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C183111B8B891B0022A1F5 /* LaunchScreen.xib */; };
 		E5C1831F1B8B891B0022A1F5 /* GPX_CaptureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C1831E1B8B891B0022A1F5 /* GPX_CaptureTests.m */; };
+		E5C183291B8B89960022A1F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C183281B8B89960022A1F5 /* MapKit.framework */; };
+		E5C1832D1B8B8A9B0022A1F5 /* BNCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C1832C1B8B8A9B0022A1F5 /* BNCapture.m */; };
+		E5C183301B8B8AAC0022A1F5 /* BNLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C1832F1B8B8AAC0022A1F5 /* BNLocation.m */; };
+		E5C183351B8B926B0022A1F5 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */; };
+		E5C183381B8B97260022A1F5 /* BNLocationDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C183371B8B97260022A1F5 /* BNLocationDateFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		E5C183181B8B891B0022A1F5 /* GPX CaptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPX CaptureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C1831D1B8B891B0022A1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C1831E1B8B891B0022A1F5 /* GPX_CaptureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPX_CaptureTests.m; sourceTree = "<group>"; };
+		E5C183281B8B89960022A1F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E5C1832B1B8B8A9B0022A1F5 /* BNCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCapture.h; sourceTree = "<group>"; };
+		E5C1832C1B8B8A9B0022A1F5 /* BNCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCapture.m; sourceTree = "<group>"; };
+		E5C1832E1B8B8AAC0022A1F5 /* BNLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLocation.h; sourceTree = "<group>"; };
+		E5C1832F1B8B8AAC0022A1F5 /* BNLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNLocation.m; sourceTree = "<group>"; };
+		E5C183311B8B8DCA0022A1F5 /* BNGPXRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNGPXRepresentation.h; sourceTree = "<group>"; };
+		E5C183331B8B926B0022A1F5 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		E5C183361B8B97260022A1F5 /* BNLocationDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLocationDateFormatter.h; sourceTree = "<group>"; };
+		E5C183371B8B97260022A1F5 /* BNLocationDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNLocationDateFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C183291B8B89960022A1F5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +79,7 @@
 		E5C182F61B8B891B0022A1F5 = {
 			isa = PBXGroup;
 			children = (
+				E5C183281B8B89960022A1F5 /* MapKit.framework */,
 				E5C183011B8B891B0022A1F5 /* GPX Capture */,
 				E5C1831B1B8B891B0022A1F5 /* GPX CaptureTests */,
 				E5C183001B8B891B0022A1F5 /* Products */,
@@ -81,6 +98,8 @@
 		E5C183011B8B891B0022A1F5 /* GPX Capture */ = {
 			isa = PBXGroup;
 			children = (
+				E5C183321B8B92510022A1F5 /* Categories */,
+				E5C1832A1B8B8A730022A1F5 /* Model */,
 				E5C183061B8B891B0022A1F5 /* AppDelegate.h */,
 				E5C183071B8B891B0022A1F5 /* AppDelegate.m */,
 				E5C183091B8B891B0022A1F5 /* ViewController.h */,
@@ -117,6 +136,29 @@
 				E5C1831D1B8B891B0022A1F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5C1832A1B8B8A730022A1F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5C1832B1B8B8A9B0022A1F5 /* BNCapture.h */,
+				E5C1832C1B8B8A9B0022A1F5 /* BNCapture.m */,
+				E5C1832E1B8B8AAC0022A1F5 /* BNLocation.h */,
+				E5C1832F1B8B8AAC0022A1F5 /* BNLocation.m */,
+				E5C183311B8B8DCA0022A1F5 /* BNGPXRepresentation.h */,
+				E5C183361B8B97260022A1F5 /* BNLocationDateFormatter.h */,
+				E5C183371B8B97260022A1F5 /* BNLocationDateFormatter.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5C183321B8B92510022A1F5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E5C183331B8B926B0022A1F5 /* MKMapView+ZoomLevel.h */,
+				E5C183341B8B926B0022A1F5 /* MKMapView+ZoomLevel.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +210,11 @@
 				TargetAttributes = {
 					E5C182FE1B8B891B0022A1F5 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E5C183171B8B891B0022A1F5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -220,8 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C1830B1B8B891B0022A1F5 /* ViewController.m in Sources */,
+				E5C183351B8B926B0022A1F5 /* MKMapView+ZoomLevel.m in Sources */,
 				E5C183081B8B891B0022A1F5 /* AppDelegate.m in Sources */,
+				E5C183301B8B8AAC0022A1F5 /* BNLocation.m in Sources */,
+				E5C1832D1B8B8A9B0022A1F5 /* BNCapture.m in Sources */,
 				E5C183051B8B891B0022A1F5 /* main.m in Sources */,
+				E5C183381B8B97260022A1F5 /* BNLocationDateFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "GPX Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "GPX Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
