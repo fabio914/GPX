@@ -16,6 +16,31 @@
     return [[[self alloc] initWithCoordinate:coordinate elevation:elevation time:time] autorelease];
 }
 
++ (instancetype)fromGpxRepresentation:(NSDictionary *)representation {
+    
+    if(![representation isKindOfClass:[NSDictionary class]])
+        return nil;
+    
+    if(!representation[@"_lon"] || ![representation[@"_lon"] isKindOfClass:[NSString class]])
+        return nil;
+    
+    if(!representation[@"_lat"] || ![representation[@"_lat"] isKindOfClass:[NSString class]])
+        return nil;
+    
+    if(!representation[@"ele"] || ![representation[@"ele"] isKindOfClass:[NSString class]])
+        return nil;
+    
+    if(!representation[@"time"] || ![representation[@"time"] isKindOfClass:[NSString class]])
+        return nil;
+    
+    NSDate * date = [[BNLocationDateFormatter shared] dateFromGpxString:representation[@"time"]];
+                     
+    if(date == nil)
+         return nil;
+                     
+    return [self locationWithCoordinate:CLLocationCoordinate2DMake([representation[@"_lat"] doubleValue], [representation[@"_lon"] doubleValue]) elevation:[representation[@"ele"] doubleValue] time:date];
+}
+
 - (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate elevation:(double)elevation time:(NSDate *)time {
     
     if(self = [super init]) {

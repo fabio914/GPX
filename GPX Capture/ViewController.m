@@ -18,6 +18,7 @@
 @property (retain, nonatomic) IBOutlet MKMapView * mapView;
 @property (retain, nonatomic) IBOutlet UIButton * buttonView;
 @property (retain, nonatomic) IBOutlet UIView * redView;
+@property (retain, nonatomic) IBOutlet UIView * loadAreaView;
 
 @property (nonatomic, retain) CLLocationManager * manager;
 @property (nonatomic, retain) BNCapture * capture;
@@ -44,6 +45,12 @@
     [_manager startUpdatingLocation];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [_manager stopUpdatingLocation];
+}
+
 - (void)startBlinking {
     
     [self.redView setHidden:NO];
@@ -68,6 +75,7 @@
         
         self.capture = [BNCapture capture];
         [self startBlinking];
+        [self.loadAreaView setHidden:YES];
         [self.buttonView setTitle:@"Stop" forState:UIControlStateNormal];
     }
     
@@ -82,6 +90,7 @@
         
         [_capture release], _capture = nil;
         [self stopBlinking];
+        [self.loadAreaView setHidden:NO];
         [self.buttonView setTitle:@"Start" forState:UIControlStateNormal];
     }
 }
@@ -161,7 +170,8 @@
     [_capture release], _capture = nil;
     [_manager release], _manager = nil;
     
-    [_redView release];
+    [_redView release], _redView = nil;
+    [_loadAreaView release], _loadAreaView = nil;
     [super dealloc];
 }
 

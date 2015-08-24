@@ -40,6 +40,12 @@
     return [_df stringFromDate:date];
 }
 
+- (NSDate *)dateFromGpxString:(NSString *)string {
+    
+    [_df setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z"];
+    return [_df dateFromString:string];
+}
+
 - (NSString *)yyyyMMddHHmmssFromDate:(NSDate *)date {
     
     [_df setDateFormat:@"yyyyMMddHHmmss"];

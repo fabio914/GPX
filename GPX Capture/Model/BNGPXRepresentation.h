@@ -12,5 +12,6 @@
 
 @required
 - (NSString *)gpxRepresentation;
++ (instancetype)fromGpxRepresentation:(NSDictionary *)representation;
 
 @end

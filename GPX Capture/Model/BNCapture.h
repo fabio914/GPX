@@ -15,6 +15,11 @@
 @interface BNCapture : NSObject <BNGPXRepresentation>
 
 + (instancetype)capture;
+
++ (NSString *)documentsPath;
++ (NSArray *)gpxFiles;
+
++ (instancetype)loadFromFile:(NSString *)path;
 - (void)addLocation:(BNLocation *)location;
 - (NSString *)save;
 
@@ -23,5 +28,6 @@
 @interface BNCapture (MapKit)
 
 - (MKPolyline *)polyline;
+- (MKCoordinateRegion)region;
 
 @end

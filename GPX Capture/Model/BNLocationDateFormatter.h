@@ -12,6 +12,7 @@
 
 + (instancetype)shared;
 - (NSString *)gpxStringDateFromDate:(NSDate *)date;
+- (NSDate *)dateFromGpxString:(NSString *)string;
 - (NSString *)yyyyMMddHHmmssFromDate:(NSDate *)date;
 
 @end
